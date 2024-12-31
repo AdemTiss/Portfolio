@@ -98,24 +98,27 @@
         }
 
         .project-content {
-            padding: 1.5rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-        }
+    padding: 1.5rem;
+    display: grid; /* Keep grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid with a minimum width */
+    gap: 1.5rem; /* Increased gap for better spacing */
+    justify-items: center; /* Center items in the grid */
+}
 
-        .project-content img {
-            border-radius: 6px;
-            border: 2px solid #FFD700;  /* Updated gold color */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-        }
-
-        .project-content img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(255, 215, 0, 0.4);
-        }
+.project-content img {
+    border-radius: 6px;
+    border: 2px solid #FFD700;  /* Updated gold color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Added border color transition */
+    cursor: pointer;
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+    width: 100%; /* Make images take full width of their grid cell */
+}
+.project-content img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Add shadow for emphasis */
+    border-color: #ffcc00; /* Change border color on hover for emphasis */
+}
 
         .overlay {
             display: none;
@@ -152,67 +155,61 @@
     </style>
 </head>
 <body>
-    <body>
-        <header>
-            <h1>Adem Tiss</h1>
-            <p>Designer Graphique</p>
-        </header>
-    
-        <div class="container">
-            <div class="intro">
-                <p>Salut, je suis Adem Tiss, un designer graphique passionné et dévoué, spécialisé dans le branding, la création de contenu pour les réseaux sociaux et la narration visuelle. Mon portfolio présente une gamme de projets créatifs, reflétant ma capacité à donner vie à des idées à travers des designs percutants. Réalisons votre vision!</p>
-            </div>
-    
-            <!-- Projet 1 -->
-            <div class="project">
-                <h2>Projet 1 : Identité de Marque</h2>
-                <div class="project-content">
-    
-                    <!-- Images ajustées -->
-                    <img src="SOS (5).png" alt="Logo" width="200" height="200">
-                    <img src="www.reallygreatsite.com.png" alt="Carte de Visite" width="350" height="200">
-                    <img src="post.png" alt="Publication sur les Réseaux Sociaux" width="350" height="310">
-                    <img src="fb047916-e81e-4bc9-88df-53aceac9db03.jpg" alt="Bannière" width="300" height="115">
-                </div>
-            </div>
-    
-            <!-- Projet 2 -->
-            <div class="project">
-                <h2>Projet 2 : Branding pour Salle de Sport</h2>
-                <div class="project-content">
-    
-                    <!-- Images ajustées -->
-                    <img src="Haltère ROCK.jpg" alt="Post Salle de Sport 1" width="400" height="400">
-                    <img src="HALTére ROCK.png" alt="Post Salle de Sport 2" width="400" height="400">
-                </div>
-            </div>
-    
-            <!-- Projet 3 -->
-            <div class="project">
-                <h2>Projet 3 : Marque de Désodorisant</h2>
-                <div class="project-content">
-      
-                    <!-- Images ajustées -->
-                    <img src="1.png" alt="Post Désodorisant 1" width="500" height="700">
-                    <img src="3.png" alt="Post Désodorisant 2" width="500" height="700">
-                    <img src="4.png" alt="Post Désodorisant 3" width="500" height="700">
-                </div>
-            </div>
-    
-            <!-- Projet 4 -->
-            <div class="project">
-                <h2>Projet 4 : Branding pour Restaurant</h2>
-                <div class="project-content">
-                    <!-- Images ajustées -->
-                    <img src="logo.png" alt="Logo du Restaurant" width="200" height="200">
-                    <img src="post1.png" width="350" height="310">
-                </div>
+    <header>
+        <h1>Adem Tiss</h1>
+        <p>Designer Graphique</p>
+    </header>
+
+    <div class="container">
+        <div class="intro">
+            <p>Salut, je suis Adem Tiss, un designer graphique passionné et dévoué, spécialisé dans le branding, la création de contenu pour les réseaux sociaux et la narration visuelle. Mon portfolio présente une gamme de projets créatifs, reflétant ma capacité à donner vie à des idées à travers des designs percutants. Réalisons votre vision!</p>
+        </div>
+
+<!-- Projet 1 -->
+<div class="project">
+    <h2>Projet 1 : Branding pour Restaurant (Restaurant blue whale)</h2>
+    <div class="project-content">
+
+        <img src="posts/1.png" alt="Post Facebook 1" width="350" height="200">
+        <img src="posts/2.png" alt="Post Facebook 2" width="350" height="200">
+        <img src="posts/3.png" alt="Post Facebook 3" width="350" height="200">
+        <img src="posts/4.png" alt="Post Facebook 4" width="350" height="200">
+        <img src="posts/5.png" alt="Post Facebook 5" width="350" height="200">
+        <img src="posts/6.png" alt="Post Facebook 6" width="350" height="200">
+    </div>
+</div>  
+
+        <!-- Projet 2 -->
+        <div class="project">
+            <h2>Projet 2 : Branding pour Salle de Sport (Haltère ROCK)</h2>
+            <div class="project-content">
+                <img src="Haltère ROCK.jpg" alt="Post Salle de Sport 1" width="400" height="400">
+                <img src="HALTére ROCK.png" alt="Post Salle de Sport 2" width="400" height="400">
             </div>
         </div>
-    
-        <footer>
-            <p>&copy; 2024 Adem Tiss - Portfolio de Design Graphique</p>
-        </footer>
+
+        <!-- Projet 3 -->
+        <div class="project">
+            <h2>Projet 3 : Marque de Désodorisant(la maison des arômes)</h2>
+            <div class="project-content">
+                <img src="1.png" alt="Post Désodorisant 1" width="500" height="700">
+                <img src="3.png" alt="Post Désodorisant 2" width="500" height="700">
+                <img src="4.png" alt="Post Désodorisant 3" width="500" height="700">
+            </div>
+        </div>
+
+        <!-- Projet 4 -->
+        <div class="project">
+            <h2>Projet 4 : Branding pour Restaurant (rôti imen pizza)</h2>
+            <div class="project-content">
+                <img src="logo.png" alt="Logo du Restaurant" width="200" height="200">
+                <img src="post1.png" width="350" height="310">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Adem Tiss - Portfolio de Design Graphique</p> </footer>
 
     <!-- Overlay for enlarged image -->
     <div class="overlay" id="overlay">
@@ -255,23 +252,24 @@
                 }, 400); // Match the transition time
             });
         });
-        document.addEventListener('keydown', function (e) {
-    // Disable F12, Ctrl+Shift+I, Ctrl+U, Ctrl+Shift+J
-    if (e.key === 'F12' || 
-        (e.ctrlKey && (e.key === 'I' || e.key === 'U' || e.key === 'J' || e.key === 'S'))) {
-        e.preventDefault();
-    }
-    
-    // Specifically disable Ctrl+U
-    if (e.ctrlKey && e.key === 'u') {
-        e.preventDefault();
-    }
-});
 
-// Disable right-click context menu
-document.addEventListener('contextmenu', function (e) {
-    e.preventDefault();
-});
+        document.addEventListener('keydown', function (e) {
+            // Disable F12, Ctrl+Shift+I, Ctrl+U, Ctrl+Shift+J
+            if (e.key === 'F12' || 
+                (e.ctrlKey && (e.key === 'I' || e.key === 'U' || e.key === 'J' || e.key === 'S'))) {
+                e.preventDefault();
+            }
+            
+            // Specifically disable Ctrl+U
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+            }
+        });
+
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
     </script>
 </body>
 </html>
